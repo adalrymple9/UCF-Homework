@@ -30,8 +30,14 @@ document.onkeyup = function(event) {
         document.querySelector("#guessesLeft").innerHTML = guessesLeft;
     }
 
-    if (guessesLeft === 0) {
+    if (guessesLeft === -1) {
         alert("Try again!")
+        window.location.reload();
+    }
+
+    if (numberOfWins === 1) {
+        alert("Winner!")
+        window.location.reload();
     }
 
 
