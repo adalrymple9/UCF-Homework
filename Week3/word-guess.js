@@ -30,7 +30,7 @@ document.onkeyup = function(event) {
         document.querySelector("#guessesLeft").innerHTML = guessesLeft;
     }
 
-    if (guessesLeft === -1) {
+    if (guessesLeft === 0) {
         alert("Try again!")
         window.location.reload();
     }
