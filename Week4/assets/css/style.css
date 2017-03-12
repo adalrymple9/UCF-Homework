@@ -1,0 +1,50 @@
+*{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+h1 {
+    background-color: #C77131;
+    padding: 1em;
+    width: 25%;
+    color: white;
+}
+
+#total {
+    padding: 1em;
+    width: 25%;
+    background-color: #56FDFD;
+    color: #33A196;
+}
+
+h2 {
+    background-color: #60C782;
+    padding: 1em;
+    width: 25%;
+    color: #6A5271;
+}
+
+body {
+    background-image: url('http://ekladata.com/xnHUvZCPmsi5GV9FmlzZ-0AP8Y8.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+#instructions {
+    background-color: #FAE6CE;
+    color: #65A25B;
+    font-weight: bold;
+    width: 75%;
+    padding: 1em;
+}
+
+#score {
+    background-color: #33A196;
+    padding: 1em;
+    width: 25%;
+    color: white;
+}
