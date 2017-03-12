@@ -40,12 +40,12 @@ $(function() {
             wins++
             document.querySelector("#wins").innerHTML = wins;
             alert("Winner!")
-            // window.location.reload()
+            window.location.reload()
         } else if (score > computerChoice) {
             losses++
             document.querySelector("#losses").innerHTML = losses;
             alert("Try again!")
-            // window.location.reload()
+            window.location.reload()
         }
 
     });
