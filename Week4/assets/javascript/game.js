@@ -14,9 +14,7 @@ for (var i = 0; i < 4; i++) {
 $(function() {
     var score = 0;
 
-    //when the game starts
-    //when you load the page
-    //setup initial game
+ 
     var computerChoice = Math.floor(Math.random() * 100 + 1) + 50;
     var randomNumbers = [];
 
@@ -38,7 +36,6 @@ $(function() {
 
         document.querySelector("#score").innerHTML = score;
 
-        //if computerChoice is equal score 
         if (computerChoice === score) {
             wins++
             document.querySelector("#wins").innerHTML = wins;
