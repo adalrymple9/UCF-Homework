@@ -2,14 +2,15 @@ var startScreen;
 var gameHTML;
 var counter = 30;
 var questionArray = [
-"Who's birthday party did Harry, Ron, and Hermione go to in The Chamber of Secrets?", 
-"What patronus does Luna Lovegood have?", 
-"Who was the quidditch commentator in Harry's first years at Hogwarts?", 
-"Who disguised himself as Mad Eye Moody in The Goblet of Fire?", 
-"What organization did Hermione start in her 4th year?", 
-"What potion did Harry take in order to get Slughorn's memories?", 
-"Who was the first to be stunned by the Basilisk?", 
-"What was Harry's first broomstick?"];
+    "Who's birthday party did Harry, Ron, and Hermione go to in The Chamber of Secrets?",
+    "What patronus does Luna Lovegood have?",
+    "Who was the quidditch commentator in Harry's first years at Hogwarts?",
+    "Who disguised himself as Mad Eye Moody in The Goblet of Fire?",
+    "What organization did Hermione start in her 4th year?",
+    "What potion did Harry take in order to get Slughorn's memories?",
+    "Who was the first to be stunned by the Basilisk?",
+    "What was Harry's first broomstick?"
+];
 var answerArray = [
     ["Nearly Headless Nick", "Dobby", "Albus Dumbledore", "Draco Malfoy"],
     ["Lion", "Rabbit", "Horse", "Stag"],
@@ -21,23 +22,25 @@ var answerArray = [
     ["Firebolt", "Cleansweep", "Thunderbolt", "Nimbus 2000"]
 ];
 var imageArray = [
-"<img class='center-block img-right' src='img/NHN.jpg'>", 
-"<img class='center-block img-right' src='img/rabbit.jpg'>", 
-"<img class='center-block img-right' src='img/lee_jordan.jpg'>", 
-"<img class='center-block img-right' src='img/BCJ.jpg'>", 
-"<img class='center-block img-right' src='img/hermione.jpg'>", 
-"<img class='center-block img-right' src='img/felix_felicis.jpg'>", 
-"<img class='center-block img-right' src='img/mrs_norris.jpg'>", 
-"<img class='center-block img-right' src='img/nimbus.jpg'>"];
+    "<img class='center-block img-right' src='img/NHN.jpg'>",
+    "<img class='center-block img-right' src='img/rabbit.jpg'>",
+    "<img class='center-block img-right' src='img/lee_jordan.jpg'>",
+    "<img class='center-block img-right' src='img/BCJ.jpg'>",
+    "<img class='center-block img-right' src='img/hermione.jpg'>",
+    "<img class='center-block img-right' src='img/felix_felicis.jpg'>",
+    "<img class='center-block img-right' src='img/mrs_norris.jpg'>",
+    "<img class='center-block img-right' src='img/nimbus.jpg'>"
+];
 var correctAnswers = [
-"A. Nearly Headless Nick", 
-"B. Rabbit", 
-"C. Lee Jordan", 
-"C. Barty Crouch Jr.", 
-"D. Society for the Promotion of Elfish Welfare", 
-"A. Felix Felicis", 
-"B. Mrs. Norris", 
-"D. Nimbus 2000"];
+    "A. Nearly Headless Nick",
+    "B. Rabbit",
+    "C. Lee Jordan",
+    "C. Barty Crouch Jr.",
+    "D. Society for the Promotion of Elfish Welfare",
+    "A. Felix Felicis",
+    "B. Mrs. Norris",
+    "D. Nimbus 2000"
+];
 var questionCounter = 0;
 var selecterAnswer;
 var theClock;
@@ -46,8 +49,6 @@ var incorrectTally = 0;
 var unansweredTally = 0;
 
 $(document).ready(function() {
-    // Create a function that creates the start button and initial screen
-
     function initialScreen() {
         startScreen = "<p class='text-center main-button-container'><a class='btn btn-primary btn-lg btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
         $(".mainArea").html(startScreen);
@@ -58,7 +59,7 @@ $(document).ready(function() {
     //Create a function, generateHTML(), that is triggered by the start button, and generates the HTML seen on the project video...
 
     $("body").on("click", ".start-button", function(event) {
-        event.preventDefault(); // added line to test issue on GitHub Viewer
+        event.preventDefault();
         generateHTML();
 
         timerWrapper();
