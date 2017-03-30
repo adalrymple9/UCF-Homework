@@ -13,7 +13,34 @@ $(".anmlBTN").on("click", function() {
             method: "GET"
         })
         .done(function(response) {
-          $("#images").empty();
+            $("#images").empty();
+            for (i = 0; i < response.data.length; i++) {
+
+                var imgURL = response.data[i].images.original.url;
+
+                $("#images").append('<img src="' + imgURL + '" alt="">')
+            }
+        })
+});
+
+
+$(".btnbtn-primary").on("click", function(event) {
+    event.preventDefault();
+    var newAnimal = $("#textInput").val();
+    animals.push(newAnimal);
+    $("#textInput input").val("");
+    console.log(animals);
+
+    var tag = $(this).val();
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + newAnimal + "&api_key=dc6zaTOxFJmzC";
+
+    $.ajax({
+
+            url: queryURL,
+            method: "GET"
+        })
+        .done(function(response) {
+            $("#images").empty();
             for (i = 0; i < response.data.length; i++) {
 
                 var imgURL = response.data[i].images.original.url;

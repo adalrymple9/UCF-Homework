@@ -9,20 +9,16 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css"></link>
         <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-        <script src="animal.js"></script>
     </head>
 </head>
 
 <body>
-    <div></div>
     <form>
-        <label>Pick an Animal</label>
-        <input type="text">
+        <input type="text" id="textInput" class="form-control" placeholder="Add an Animal">
         <button class="btnbtn-primary">Submit</button>
-        <div id="images">
-        
-        </div>
+        <div id="images" data-state="still" class="gif"></div>
     </form>
+    <script src="animal.js"></script>
 </body>
 
 </html>

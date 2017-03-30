@@ -14,10 +14,11 @@ img {
     color: #ffffff;
     background-color: #2780e3;
     border-color: #2780e3;
-    margin: .3em;
     width: 6.5em;
+    margin: .1em;
 }
 
-label{
-	margin-left: .5em;
+.form-control {
+    width: 50%;
 }
+
