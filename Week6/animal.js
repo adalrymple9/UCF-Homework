@@ -1,12 +1,12 @@
+/*global $*/
+
 var animals = ["dog", "cat", "bird", "porcupine", "platypus", "zebra"];
 
-for (var i = 0; i < animals.length; i++) {
-    document.write("<input class='anmlBTN' type='button' value='" + animals[i] + "'/>");
-}
+displayBtns();
 
 $(".anmlBTN").on("click", function() {
     var tag = $(this).val();
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + tag + "&api_key=dc6zaTOxFJmzC";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + tag + "&api_key=dc6zaTOxFJmzC";
 
     $.ajax({
             url: queryURL,
@@ -14,7 +14,7 @@ $(".anmlBTN").on("click", function() {
         })
         .done(function(response) {
             $("#images").empty();
-            for (i = 0; i < response.data.length; i++) {
+            for (let i = 0; i < response.data.length; i++) {
 
                 var imgURL = response.data[i].images.original.url;
 
@@ -24,15 +24,16 @@ $(".anmlBTN").on("click", function() {
 });
 
 
-$(".btnbtn-primary").on("click", function(event) {
+$("#submit").on("click", function(event) {
     event.preventDefault();
-    var newAnimal = $("#textInput").val();
+    var newAnimal = $("#user-animals").val();
     animals.push(newAnimal);
-    $("#textInput input").val("");
+    displayBtns();
+    $("#user-animals").val("");
     console.log(animals);
 
     var tag = $(this).val();
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + newAnimal + "&api_key=dc6zaTOxFJmzC";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + newAnimal + "&api_key=dc6zaTOxFJmzC";
 
     $.ajax({
 
@@ -41,12 +42,36 @@ $(".btnbtn-primary").on("click", function(event) {
         })
         .done(function(response) {
             $("#images").empty();
-            for (i = 0; i < response.data.length; i++) {
+            for (let i = 0; i < response.data.length; i++) {
 
                 var imgURL = response.data[i].images.original.url;
 
-                $("#images").append('<img src="' + imgURL + '" alt="">')
+                $("#images").append('<img src="' + imgURL + '" alt="">');
             }
-        })
+        });
 
 });
+
+
+
+function displayBtns() {
+
+    $(".display-buttons").html("");
+
+    for (let i = 0; i < animals.length; i++) {
+
+        let input = $("<input>");
+
+        input.attr({
+
+            "class": "anmlBTN",
+            "type": "button",
+            "value": animals[i]
+
+        });
+
+        $(".display-buttons").append(input);
+
+    } // End of For loop
+
+} // End of displaybtns function

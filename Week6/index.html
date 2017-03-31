@@ -14,10 +14,16 @@
 
 <body>
     <form>
-        <input type="text" id="textInput" class="form-control" placeholder="Add an Animal">
-        <button class="btnbtn-primary">Submit</button>
-        <div id="images" data-state="still" class="gif"></div>
+        <div class="form-group">
+            <label for="user-animal">Animals</label>
+            <input type="text" class="form-control" id="user-animals" placeholder="Pick an Animal">
+        </div>
+        <button type="submit" class="btn btn-default" id="submit">Submit</button>
     </form>
+    <div class="row">
+        <div class="col-md-12 display-buttons"></div>
+    </div>
+    <div id="images" data-state="still" class="gif"></div>
     <script src="animal.js"></script>
 </body>
 
