@@ -1,5 +1,3 @@
-/*global $*/
-
 var animals = ["dog", "cat", "bird", "porcupine", "platypus", "zebra"];
 
 displayBtns();
