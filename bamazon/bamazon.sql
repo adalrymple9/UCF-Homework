@@ -11,90 +11,90 @@ USE bamazon_db;
 --     primary key(item_id)
 -- ); 
 
-insert into products(
-	product_name, 
-	department_name, 
-	price, 
-	stock_quantity 
-)
+-- insert into products(
+-- 	product_name, 
+-- 	department_name, 
+-- 	price, 
+-- 	stock_quantity 
+-- )
 
-select
-	"soap",
-	"toiletries",
-	2,
-	10 
+-- select
+-- 	"soap",
+-- 	"toiletries",
+-- 	2,
+-- 	10 
 
-union all 
+-- union all 
 
-select
-	"candy",
-	"grocery",
-	1,
-	5 
+-- select
+-- 	"candy",
+-- 	"grocery",
+-- 	1,
+-- 	5 
 
-union all 
+-- union all 
 
-select
-	"books",
-	"library",
-	8,
-	7 
+-- select
+-- 	"books",
+-- 	"library",
+-- 	8,
+-- 	7 
 
-union all 
+-- union all 
 
-select
-	"water bottle",
-	"home",
-	5,
-	4 
+-- select
+-- 	"water bottle",
+-- 	"home",
+-- 	5,
+-- 	4 
 
-union all
+-- union all
 
-select
-	"computer",
-	"electronic",
-	100,
-	10 
+-- select
+-- 	"computer",
+-- 	"electronic",
+-- 	100,
+-- 	10 
 
-union all 
+-- union all 
 
-select
-	"chair",
-	"home",
-	8,
-	15 
+-- select
+-- 	"chair",
+-- 	"home",
+-- 	8,
+-- 	15 
 
-union all 
+-- union all 
 
-select
-	"desk",
-	"home",
-	100,
-	2 
+-- select
+-- 	"desk",
+-- 	"home",
+-- 	100,
+-- 	2 
 
-union all 
+-- union all 
 
-select
-	"lamp",
-	"home",
-	50,
-	5 
+-- select
+-- 	"lamp",
+-- 	"home",
+-- 	50,
+-- 	5 
 
-union all 
+-- union all 
 
-select
-	"mouse",
-	"electronic",
-	14,
-	10 
+-- select
+-- 	"mouse",
+-- 	"electronic",
+-- 	14,
+-- 	10 
 
-union all 
+-- union all 
 
-select
-	"phone",
-	"electronics",
-	150,
-	10 
+-- select
+-- 	"phone",
+-- 	"electronics",
+-- 	150,
+-- 	10 
 
 
 
