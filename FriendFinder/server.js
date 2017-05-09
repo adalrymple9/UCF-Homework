@@ -1,8 +1,7 @@
 // DEPENDENCIES
 var express = require("express");
 var bodyParser = require("body-parser");
-var apiRoutes = require("./app/routing/apiRoutes.js");
-var htmlRoutes = require("./app/routing/htmlRoutes.js");
+
 
 
 // EXPRESS CONFIGURATION
@@ -11,10 +10,12 @@ var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({type: "application/vnd.api+json"}))
 
 // ROUTER
-htmlRoutes(app);
-apiRoutes(app);
+require("./routing/apiRoutes")(app);
+require("./routing/htmlRoutes")(app);
 
 // LISTENER
 app.listen(PORT, function() {
