@@ -4,7 +4,7 @@ module.exports = function (app) {
 
   // Provides all friends - provides JSON
   app.get("/api", function (req, res) {
-    return res.json(friends);
+    res.json(friends);
   });
 
 
