@@ -1,0 +1,9 @@
+2 players 
+
+the players are going to press enter with a screen of 10 cards
+
+each card is going to be associated with a random number from 1-10 
+
+when the first player clicks 1 of the 10 cards, its going to be presented presented the random number that was associated to the card 
+
+then that player has to choose if the opponet is going to a higher or lower number on the card that they click
