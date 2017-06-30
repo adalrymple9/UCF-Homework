@@ -1,6 +1,6 @@
-console.log("Keys loaded");
+console.log("Keys working");
 
-// API credentials by following these steps:
+// API credentials 
 exports.twitterKeys = {
   consumer_key: "SZzsigw3iqE0pSADBUJkENCab",
   consumer_secret: "AMw4tYFP7an0lIul49C21aS9fk2cWZTGS8XVE9bjb2JFOlNa36",

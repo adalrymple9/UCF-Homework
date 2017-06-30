@@ -6,11 +6,11 @@ var request = require("request");
 var fs = require("fs");
 
 // FUNCTIONS
+// =====================================
 var getArtistNames = function(artist) {
     return artist.name;
 };
 
-// Function for running a Spotify search
 var getMeSpotify = function(songName) {
 
     if (songName === undefined) {
