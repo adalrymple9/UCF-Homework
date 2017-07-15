@@ -1,7 +1,0 @@
-@model mvcnetmongo.Models.Student
-<form method="POST" action="@Url.Action("Update", "Students", new {id = Model.Id})">
-    <label for="FirstName">First Name:</label><input type="text" name="FirstName" value="@Model.FirstName"><br>
-    <label for="LastName">Last Name:</label><input type="text" name="LastName" value="@Model.LastName"><br>
-    <label for="DOB">Date of birth:</label><input type="date" name="DOB" value="@Model.DOB.ToString("yyyy-MM-dd")"><br>
-    <button type="submit">Update</button>    
-</form>
