@@ -1,0 +1,22 @@
+@model List<mvcnetmongo.Models.Student>
+
+<h1>Students</h1>
+
+@Html.ActionLink("Create new student", "Create", "Students")
+<div class="container">
+    @foreach(var student in Model) {
+        <div class="row">
+            <div class="col col-xs-2">@student.FirstName</div>
+            <div class="col col-xs-2">@student.LastName</div>
+            <div class="col col-xs-2">@student.DOB.ToString("MM/dd/yyyy")</div>
+            <div class="col col-xs-1">
+                @Html.ActionLink("Edit", "Edit", "Students", new { id = student.Id }, new {@class="btn btn-link"})                          
+            </div>
+            <div class="col col-xs-1">
+                <form method="POST" action="@Url.Action("Delete", "Students", new {id = student.Id})">
+                    <button class="btn btn-link" type="submit">Delete</button>
+                </form>  
+            </div>
+        </div>
+    }
+</div>
